@@ -1,0 +1,37 @@
+<%- include('partials/header'); -%>
+<div class="movie-details">
+  <img src="<%= movie.Poster %>" alt="<%= movie.Title %>" />
+  <div class="detail-text">
+    <h1>Movie title: <%= movie.Title %></h1>
+    <p>Year: <%= movie.Year %></p>
+    <p>Released: <%= movie.Released %></p>
+    <p>Movie duration: <%= movie.Runtime %></p>
+    <p>Movie genres: <%= movie.Genre %></p>
+    <p>IMDB rating: <%= movie.imdbRating %></p>
+    <p>Plot of the movie: <%= movie.Plot %></p>
+  </div>
+</div>
+<form
+  action="/score/<%= movie.Title %>/<%= movie.imdbRating %>"
+  method="post"
+  class="rating-form"
+>
+  <label for="rating-select">Rate this movie:</label>
+  <select
+    class="form-select form-select-sm d-inline"
+    id="rating-select"
+    name="score"
+  >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+  </select>
+  <input type="hidden" name="poster" value="<%= movie.Poster %>" />
+  <button type="submit" class="btn btn-primary btn-sm">
+    Submit your rating
+  </button>
+</form>
+
+<%- include('partials/footer')-%>

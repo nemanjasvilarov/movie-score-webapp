@@ -1,0 +1,299 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #d6e0f0;
+  margin-bottom: 50px;
+  font-family: "Oswarld";
+}
+
+.main-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #769fcd;
+  opacity: 1; /* Firefox */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #769fcd;
+  color: #f1f3f8;
+}
+
+.menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu h1 {
+  margin-top: 4px;
+  font-weight: 800;
+}
+
+.menu h1:hover {
+  background-color: #f1f3f8;
+  color: #0078aa;
+  transition: 0.5s;
+}
+
+.menu ul {
+  margin-top: 20px;
+  display: flex;
+  list-style-type: none;
+}
+
+.menu ul li {
+  margin-left: 20px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu ul li a:hover {
+  background-color: #f1f3f8;
+  color: #0078aa;
+  transition: 0.5s;
+}
+
+.movies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  color: #0078aa;
+  height: 100%;
+}
+
+.movies-wrapper h1 {
+  font-size: 30px;
+}
+
+.search-form {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #769fcd;
+}
+
+.search-form h1,
+p {
+  color: #0078aa;
+}
+
+.search-form select {
+  color: #769fcd;
+  width: 200px;
+}
+
+.search-form input {
+  border: 2px solid #769fcd;
+  border-radius: 4px;
+  color: #769fcd;
+}
+
+.search-form button {
+  color: #d6e0f0;
+  margin-bottom: 3px;
+  background-color: #0078aa;
+}
+
+.search-form button:hover {
+  background-color: #769fcd;
+  transition: 0.5s;
+}
+
+.movie-details {
+  color: #0078aa;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-details .detail-text {
+  width: 800px;
+  position: relative;
+  text-align: start;
+  margin-left: 20px;
+}
+
+.movie-details .detail-text p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.rating-form {
+  color: #0078aa;
+  padding-bottom: 90px;
+}
+
+.rating-form select {
+  color: #0078aa;
+  width: 60px;
+}
+
+.rating-form select option {
+  color: #0078aa;
+  width: 200px;
+}
+
+.rating-form button {
+  background-color: #0078aa;
+  margin-bottom: 3px;
+}
+
+.rating-form button:hover {
+  background-color: #769fcd;
+  transition: 0.5s;
+}
+
+.about {
+  color: #0078aa;
+  margin-top: 30px;
+}
+.about p {
+  margin-top: 20px;
+}
+
+.filter-form {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #0078aa;
+}
+
+.filter-form select {
+  color: #0078aa;
+  width: 150px;
+}
+
+.filter-form button {
+  background-color: #0078aa;
+  margin-bottom: 3px;
+}
+
+.filter-form button:hover {
+  background-color: #769fcd;
+  transition: 0.5s;
+}
+
+.movie {
+  color: #0078aa;
+  margin-bottom: 30px;
+}
+
+.movie p {
+  margin: auto;
+}
+
+.movie-score-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+#footer {
+  color: #f1f3f8;
+  background-color: #769fcd;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 30px 0;
+}
+
+#footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1300px) {
+  .movies-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .movie-score-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .movie-details .detail-text {
+    width: 400px;
+  }
+  .movie-details .detail-text h1 {
+    font-size: 30px;
+  }
+  .movie-details .detail-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1046px) {
+  .movies-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movie-score-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 730px) {
+  .movies-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .movie-score-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .movie-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+  }
+
+  .movie-details .detail-text {
+    margin-left: 100px;
+  }
+
+  .movie-details .detail-text h1 {
+    font-size: 26px;
+  }
+  .movie-details .detail-text p {
+    width: 310px;
+  }
+
+  .rating-form select {
+    height: 30px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .rating-form button {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media (max-width: 670px) {
+  .search-form input {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .search-form input {
+    margin-bottom: 10px;
+  }
+
+  .search-form select {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .search-form button {
+    display: block;
+    margin: auto;
+  }
+}

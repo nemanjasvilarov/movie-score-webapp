@@ -1,0 +1,26 @@
+<%- include('partials/header'); -%>
+<form action="/scores/sort" method="get" class="filter-form">
+  <h1>Filter movies</h1>
+  <select
+    id="select-sort"
+    name="sortScore"
+    class="form-select form-select-sm d-inline"
+  >
+    <option value="">Sort movies by:</option>
+    <option value="visitors score">visitors score</option>
+    <option value="IMDB score">IMDB score</option>
+  </select>
+  <button type="submit" class="btn btn-primary btn-sm">Filter</button>
+</form>
+<div class="movie-score-wrapper">
+  <% for(let movie of movies){ %>
+  <div class="movie">
+    <img src="<%= movie.poster %>" alt="<%= movie.name %>" />
+    <h2><%= movie.name %></h2>
+    <p>Visitors score: <%= movie.score %></p>
+    <p>Number of visitors vote: <%= movie.votes.length %></p>
+    <p>IMDB score: <%= movie.IMDBScore %></p>
+  </div>
+  <% } %>
+</div>
+<%- include('partials/footer')-%>
