@@ -17,8 +17,8 @@
   <select
     class="form-select form-select-sm d-inline"
     name="type"
-    id="rating-select"
     name="selectScore"
+    aria-label="label for the select"
   >
     <option value="">--Please choose a type--</option>
     <option value="movie">movie</option>
@@ -29,7 +29,7 @@
 <div class="movies-wrapper">
   <% for(let movie of movies){ %>
   <div>
-    <a href="/details/<%= movie.imdbID%>"
+    <a href="/details/<%= movie.imdbID%>" aria-label="Picture"
       ><img src="<%= movie.Poster %>" alt="<%= movie.Title %>"
     /></a>
     <h1><%= movie.Title %></h1>
