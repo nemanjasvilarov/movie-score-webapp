@@ -7,7 +7,7 @@ const fetchMoviesData = async (searchTerms) => {
         params: {
             apikey: process.env.APIKEY,
             s: searchTerms.title,
-            type: searchTerms.type,
+            type: 'movie',
             y: searchTerms.year
         }
     });
