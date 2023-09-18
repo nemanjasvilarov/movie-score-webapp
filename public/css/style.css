@@ -278,7 +278,7 @@ p {
   }
   .movies-wrapper {
     grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 10%;
+    padding-bottom: 15%;
   }
   .movie-score-wrapper {
     grid-template-columns: repeat(1, 1fr);
@@ -319,6 +319,10 @@ p {
     margin: 0;
     align-self: center;
     margin-right: 20px;
+  }
+
+  .md {
+    padding: 15%;
   }
 
   .menu {
