@@ -5,6 +5,7 @@ const movieSchema = new mongoose.Schema({
     score: Number,
     IMDBScore: Number,
     poster: String,
+    imdbID: String,
     votes: []
 });
 

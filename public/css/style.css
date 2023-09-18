@@ -3,13 +3,9 @@ body {
   padding: 0;
   text-align: center;
   background-color: #d6e0f0;
-  margin-bottom: 50px;
   font-family: "Oswarld";
-}
-
-.main-container {
-  position: relative;
   min-height: 100vh;
+  position: relative;
 }
 
 ::placeholder {
@@ -25,6 +21,9 @@ body {
   background-color: #769fcd;
   color: #f1f3f8;
   width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
 }
 
 .menu a {
@@ -84,6 +83,7 @@ body {
   justify-content: center;
   color: #0078aa;
   height: 100%;
+  padding-bottom: 5%;
 }
 
 .movies-wrapper h1 {
@@ -94,6 +94,8 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   color: #769fcd;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .search-form h1,
@@ -129,6 +131,9 @@ p {
   padding-bottom: 20px;
   display: flex;
   justify-content: center;
+  position: relative;
+  padding-top: 5%;
+  margin-top: 30px;
 }
 
 .movie-details .detail-text {
@@ -170,7 +175,8 @@ p {
 
 .about {
   color: #0078aa;
-  margin-top: 30px;
+  position: relative;
+  padding-top: 5%;
 }
 .about p {
   margin-top: 20px;
@@ -180,6 +186,7 @@ p {
   margin-top: 30px;
   margin-bottom: 15px;
   color: #0078aa;
+  padding-top: 5%;
 }
 
 .filter-form select {
@@ -210,16 +217,16 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  padding-bottom: 5%;
 }
 
 #footer {
   color: #f1f3f8;
   background-color: #769fcd;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  width: 100%;
   padding: 20px 0;
+  position: fixed;
+  bottom: 0;
 }
 
 #footer p {
@@ -333,6 +340,7 @@ p {
 
   .menu ul li {
     margin: 0;
+    padding: 1% 0;
   }
 
   ul.active {

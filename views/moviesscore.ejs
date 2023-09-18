@@ -16,7 +16,9 @@
 <div class="movie-score-wrapper">
   <% for(let movie of movies){ %>
   <div class="movie">
-    <img src="<%= movie.poster %>" alt="<%= movie.name %>" />
+    <a href="/movie-details/<%= movie.imdbID%>" aria-label="Picture">
+      <img src="<%= movie.poster %>" alt="<%= movie.name %>" />
+    </a>
     <h2><%= movie.name %></h2>
     <p>Visitors score: <%= movie.score %></p>
     <p>Number of visitors vote: <%= movie.votes.length %></p>

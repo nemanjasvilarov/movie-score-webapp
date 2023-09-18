@@ -39,8 +39,8 @@ app.get('/scores', (req, res) => {
     });
 });
 
-app.post('/score/:name/:IMDBScore', (req, res) => {
-    const { name, IMDBScore } = req.params;
+app.post('/score/:name/:IMDBScore/:imdbID', (req, res) => {
+    const { name, IMDBScore, imdbID } = req.params;
     const { score: visitorScore, poster } = req.body;
     Movie.findOne({ name: name }, (err, foundMovie) => {
         if (err) {
@@ -74,6 +74,7 @@ app.post('/score/:name/:IMDBScore', (req, res) => {
                     score: visitorScore,
                     poster: poster,
                     IMDBScore: IMDBScore,
+                    imdbID: imdbID,
                     votes: visitorScore
                 });
                 movie.save((err) => {
@@ -112,6 +113,10 @@ app.get('/details/:id', async (req, res) => {
     res.render('moviedetailes', { movie: data });
 });
 
+app.get('/movie-details/:id', async (req, res) => {
+    const data = await fetchMovieDetails(req.params.id);
+    res.render('moviescoredetails', { movie: data });
+});
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('Server started on port 3000...');
