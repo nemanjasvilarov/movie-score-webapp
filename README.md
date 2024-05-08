@@ -6,6 +6,7 @@ Technologies used to make this web app:
 - Node.js
 - JavaScript
 - EJS
+- HTML
 - CSS
 
 URL: https://movie-score-webapp.onrender.com
