@@ -1,5 +1,11 @@
 # movie-score-app
-This is a web application where visitors can search for a movie and they can rate that movie. Visitors can also see movies that were already rated. 
 
-# web app 
-https://movie-score-webapp.onrender.com
+Movie scores is a web appliaction where user can search for the movies. Visitors can then rate those movies from 1 to 5. Movies that were rated can be viewed and sorted by visitors score and IMDB score.
+
+Technologies used to make this web app:
+- Node.js
+- JavaScript
+- EJS
+- CSS
+
+URL: https://movie-score-webapp.onrender.com
